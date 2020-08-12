@@ -1,0 +1,25 @@
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-family: var(--font-display);
+    font-size: 5.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: var(--font-display);
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-family: var(--font-secondary);
+    font-size: 1.6rem;
+    font-weight: 400;
+}

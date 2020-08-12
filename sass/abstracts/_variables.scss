@@ -1,0 +1,25 @@
+:root {
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Lato', sans-serif;
+    --font-display: 'Montserrat', sans-serif;
+    --font-display-2: 'Roboto Slab', sans-serif;
+
+    --color-white: #fff;
+    --color-black: #000;
+    --color-grey-light: #555555;
+    --color-grey-very-light: #808080;
+    --color-slider-chevrons: rgba(194, 188, 188, .9);
+    --color-grey-dark: #404040;
+
+    --color-red: #e96656;
+    --color-green: #34d293;
+    --color-blue: #3ab0e2;
+
+
+    --shadow-dark: 0 1px 10px -6px rgba(0,0,0,.42), 0 1px 10px 0px rgba(0,0,0,.12), 0 4px 20px 3px rgba(0,0,0,.1);
+    --shadow-light: 0 2rem 5rem rgba(0, 0, 0,.06);
+
+    --header-height: 7rem;
+
+    --line: 1px solid var(--color-grey-light-2);
+}

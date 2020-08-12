@@ -1,0 +1,70 @@
+.slider {
+    width: 85rem;
+    //overflow: hidden;
+    //position: relative;
+
+    &__image-wrapper {
+        width: 100%;
+        position: relative;
+    }
+
+    &__control {
+        position: absolute;
+        top: 50%;
+        display: block;
+        color: var(--color-slider-chevrons);
+        font-size: 4rem;
+        cursor: pointer;
+
+        &--left {
+            left: 2rem;
+        }
+    
+        &--right {
+            right: 2rem;
+        }
+        
+    }
+
+    
+    &__image-container {
+        width: 100%;
+        display: flex;
+    }
+
+    &__image {
+        width: 0;
+        height: auto;
+
+        &--active {
+            width: 100% !important;
+        }
+    }
+
+    &__markers-container {
+        width: 100%;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__marker {
+        display: inline-block;
+        background-color: var(--color-grey-very-light);
+        border-radius: 50%;
+        width: .7rem;
+        height: .7rem;
+
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        &--active {
+            background-color: var(--color-black);
+        }
+    }
+
+}

@@ -1,0 +1,23 @@
+.btn {
+    color: var(--color-white);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-family: var(--font-primary);
+    font-weight: 300;
+    cursor: pointer;
+
+    padding: 2rem 4rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+
+    transition: all .3s;
+
+    &:active {
+        transform: translateY(3px);
+    }
+}
+
+.btn-red {
+    background-color: var(--color-red);
+}

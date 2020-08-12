@@ -1,0 +1,83 @@
+.feature {
+    // width: 33%;
+    //min-width: 20rem;
+    max-width: 39rem;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-basis: 30rem;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+
+    &__icon {
+        width: 13rem;
+        height: 13rem;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5.5rem;
+
+        transition: all .5s;
+
+        &:hover {
+            transform: rotate(360deg);
+        }
+    }
+
+    &__heading {
+        font-size: 1.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 2rem 0 4rem 0;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 11rem;
+            height: 2px;
+
+            position: absolute;
+            top: calc(100% + 1rem);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__description {
+        color: var(--color-grey-very-light);
+        text-align: center;
+    }
+
+    &--red &__icon {
+        border-color: var(--color-red);
+        color: var(--color-red);
+    }
+
+    &--red &__heading::after {
+        background-color: var(--color-red);
+    }
+
+
+    &--green &__icon {
+        border-color: var(--color-green);
+        color: var(--color-green);
+    }
+
+    &--green &__heading::after {
+        background-color: var(--color-green);
+    }
+
+
+    &--blue &__icon {
+        border-color: var(--color-blue);
+        color: var(--color-blue);
+    }
+
+    &--blue &__heading::after {
+        background-color: var(--color-blue);
+    }
+}
