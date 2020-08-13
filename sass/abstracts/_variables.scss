@@ -10,6 +10,9 @@
     --color-grey-very-light: #808080;
     --color-slider-chevrons: rgba(194, 188, 188, .9);
     --color-grey-dark: #404040;
+    --color-grey-address: #272727;
+    --color-grey-copy: #171717;
+    --color-grey-home: #323437;
 
     --color-red: #e96656;
     --color-green: #34d293;
@@ -22,4 +25,12 @@
     --header-height: 7rem;
 
     --line: 1px solid var(--color-grey-light-2);
+
 }
+
+
+// RESPOSIVE PREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 56.25em;   // 900px
+$bp-medium: 37.5em;    // 600px
+$bp-small: 25em;   // 400px
