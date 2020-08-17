@@ -7,15 +7,19 @@
         &--item {
             position: relative;
             padding: .5rem 1rem;
+            text-align: center;
 
             &:not(:last-child) {
                 margin-right: 1rem;
             }
+
+            
         }
 
         &--link,
         &--link:link,
         &--link:visited {
+            display: inline-block;
             text-decoration: none;
             text-transform: uppercase;
             color: var(--color-grey-light);
@@ -65,5 +69,118 @@
             cursor: pointer;
             color: var(--color-red);
         }
+
+        /// For small screens < 600 px
+        @media only screen and (max-width: $bp-medium) {
+            width: 2rem;
+            height: 2rem;
+            overflow: hidden;
+            visibility: hidden;
+
+            position: absolute;
+            top: 3rem;
+            right: 5rem;
+            transition: all .3s;
+
+            #switcher:checked ~ & {
+                position: fixed;
+                z-index: 9500;
+                top: 0;
+                right: 0;
+                visibility: visible;
+                width: 100vw;
+                height: 100vh;
+                background-color: var(--color-white);
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+
+
+    /// Menu SWITCHER for small screens
+
+    #switcher {
+        position: absolute;
+        left: -99999999rem;
+        visibility: hidden;
+    }
+
+    &__checkbox-label {
+        display: none;
+        z-index: 10000;
+        //border: 3px solid red;
+
+        @media only screen and (max-width: $bp-medium) {
+            display: flex;
+        }
+
+        position: absolute;
+        top: 3rem;
+        right: 5rem;
+
+        
+        align-items: center;
+        cursor: pointer;
+        height: 3rem;
+        width: 3rem;
+
+        &--line,
+        &--line::before,
+        &--line::after {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-grey-light);
+            transition: all .3s;
+        }
+
+        &--line::before {
+                content: "";
+                position: absolute;
+                top: -5px;
+            }
+
+        &--line::after {
+                content: "";
+                position: absolute;
+                top: 5px;
+            }
+        
+    }
+
+    
+
+}
+
+/// Menu for small screens
+
+#switcher:checked ~ .navigation__list .navigation__list--link {
+    font-size: 2rem;
+}
+
+#switcher:checked ~ .navigation__list .navigation__list--item:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+
+// Когда мы делаем rotate для элемента, псевдоэлементы before и after поворачиваются вместе с ним
+// Мы поворачиваем линию на 45 градусов, before и after поворачиваются вместе с ней.
+// После этого before надо скрыть, а after повернуть на 90 градусов
+#switcher:checked ~ .navigation__checkbox-label .navigation__checkbox-label--line {
+    transform: rotate(45deg);
+
+    &::before {
+        display: none; 
+    }
+
+    &::after {
+        top: 0;
+        transform: rotate(90deg);
     }
 }
