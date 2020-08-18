@@ -73,6 +73,10 @@ section {
   padding-left: 10rem;
   padding-right: 10rem;
   width: 100%; }
+  @media only screen and (max-width: 43.75em) {
+    section {
+      padding-left: 5rem;
+      padding-right: 5rem; } }
 
 .btn {
   color: var(--color-white);
@@ -225,7 +229,7 @@ section {
   .navigation__list--link:hover, .navigation__list--link:active {
     cursor: pointer;
     color: var(--color-red); }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 43.75em) {
     .navigation__list {
       width: 2rem;
       height: 2rem;
@@ -264,7 +268,7 @@ section {
   cursor: pointer;
   height: 3rem;
   width: 3rem; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 43.75em) {
     .navigation__checkbox-label {
       display: flex; } }
   .navigation__checkbox-label--line, .navigation__checkbox-label--line::before, .navigation__checkbox-label--line::after {
@@ -399,6 +403,9 @@ section {
   height: var(--header-height);
   background-color: var(--color-white);
   z-index: 9000; }
+  @media only screen and (max-width: 56.25em) {
+    .section-header {
+      padding: 1rem 5rem; } }
   .section-header__logo {
     height: 100%; }
     .section-header__logo--img {
@@ -478,6 +485,9 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media only screen and (max-width: 43.75em) {
+    .section-portfolio {
+      padding: 5rem 0; } }
   .section-portfolio__heading-2 {
     text-align: center;
     margin-bottom: 1rem; }
@@ -528,7 +538,8 @@ section {
       align-items: center; }
       @media only screen and (max-width: 68.75em) {
         .section-what-makes-us-diff__content--right {
-          flex-direction: row; } }
+          flex-direction: row;
+          align-items: flex-start; } }
   .section-what-makes-us-diff__text:not(:last-child) {
     margin-bottom: 1.7rem; }
 
