@@ -1,7 +1,10 @@
 .slider {
-    width: 85rem;
-    //overflow: hidden;
-    //position: relative;
+    width: 100%;
+    max-width: 100%;
+    
+    @media only screen and (min-width: $bp-largest) {
+        width: 110rem
+    }
 
     &__image-wrapper {
         width: 100%;

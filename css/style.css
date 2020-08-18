@@ -172,6 +172,7 @@ section {
   .feature-small__heading {
     font-size: 1.6rem;
     text-transform: uppercase;
+    text-align: center;
     font-family: var(--font-display-2); }
 
 .navigation__list {
@@ -190,6 +191,9 @@ section {
     color: var(--color-grey-light);
     font-size: 1.2rem;
     transition: all .5s; }
+    @media only screen and (min-width: 75em) {
+      .navigation__list--link, .navigation__list--link:link, .navigation__list--link:visited {
+        font-size: 1.5rem; } }
     .navigation__list--link::before, .navigation__list--link::after, .navigation__list--link:link::before, .navigation__list--link:link::after, .navigation__list--link:visited::before, .navigation__list--link:visited::after {
       content: "";
       position: absolute;
@@ -221,7 +225,7 @@ section {
       overflow: hidden;
       visibility: hidden;
       position: absolute;
-      top: 3rem;
+      top: 50%;
       right: 5rem;
       transition: all .3s; }
       #switcher:checked ~ .navigation__list {
@@ -247,7 +251,7 @@ section {
   display: none;
   z-index: 10000;
   position: absolute;
-  top: 3rem;
+  top: 2rem;
   right: 5rem;
   align-items: center;
   cursor: pointer;
@@ -287,7 +291,11 @@ section {
     transform: rotate(90deg); }
 
 .slider {
-  width: 85rem; }
+  width: 100%;
+  max-width: 100%; }
+  @media only screen and (min-width: 75em) {
+    .slider {
+      width: 110rem; } }
   .slider__image-wrapper {
     width: 100%;
     position: relative; }
@@ -409,6 +417,7 @@ section {
     line-height: 7rem;
     margin-bottom: 2rem; }
   .section-main__text-content {
+    max-width: 90rem;
     text-align: center;
     font-size: 1.7rem;
     font-weight: 300;
