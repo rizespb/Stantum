@@ -558,6 +558,9 @@ section {
   color: var(--color-grey-address-font);
   font-family: var(--font-secondary);
   font-size: 1.4rem; }
+  @media only screen and (max-width: 25em) {
+    .section-address {
+      grid-template-columns: 30% 70%; } }
   .section-address__map-container {
     grid-area: 1 / 1 / 1 / -1;
     width: 100%;
@@ -572,6 +575,9 @@ section {
     .section-address__address--icon {
       font-size: 3rem;
       color: var(--color-red); }
+    @media only screen and (max-width: 25em) {
+      .section-address__address {
+        grid-area: 2 / 1 / 2 / -1; } }
   .section-address__home {
     display: flex;
     flex-direction: column;

@@ -253,6 +253,10 @@
     color: var(--color-grey-address-font);
     font-family: var(--font-secondary);
     font-size: 1.4rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-template-columns: 30% 70%;
+    }
     
     &__map-container {
         grid-area: 1 / 1 / 1 / -1;
@@ -274,6 +278,10 @@
             font-size: 3rem;
             color: var(--color-red);
         }
+
+        @media only screen and (max-width: $bp-smallest) {
+            grid-area: 2 / 1 / 2 / -1;
+        }
     }
 
     &__home {
@@ -290,6 +298,8 @@
         @media only screen and (max-width: $bp-small) {
             padding: 2rem .3rem;
         }
+
+        
 
         &--icon {
             font-size: 5rem;
@@ -329,6 +339,7 @@
         @media only screen and (max-width: $bp-small) {
             padding: 0 1rem;
         }
+
         
 
         &--icon {
