@@ -77,6 +77,10 @@ section {
     section {
       padding-left: 5rem;
       padding-right: 5rem; } }
+  @media only screen and (max-width: 25em) {
+    section {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
 
 .btn {
   color: var(--color-white);
@@ -455,6 +459,9 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     grid-gap: 5rem;
     justify-items: center; }
+    @media only screen and (max-width: 25em) {
+      .section-technologies__container {
+        grid-gap: 2rem; } }
     .section-technologies__container--image {
       width: auto;
       height: 15rem;

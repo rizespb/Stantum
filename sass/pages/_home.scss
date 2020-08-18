@@ -91,7 +91,9 @@
         grid-gap: 5rem;
         justify-items: center;
         
-
+        @media only screen and (max-width: $bp-smallest) {
+            grid-gap: 2rem;
+        }
 
         &--image {
             width: auto;
@@ -104,6 +106,11 @@
                 transform: scale(1.2);
                 
             }
+
+            // @media only screen and (max-width: $bp-smallest) {
+            //     height: 10rem;
+                
+            // }
         }
     }
 }
