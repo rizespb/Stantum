@@ -23,7 +23,7 @@
             text-decoration: none;
             text-transform: uppercase;
             color: var(--color-grey-light);
-            font-size: 1.2rem;
+            font-size: 1.4rem;
 
             transition: all .5s;
 
@@ -75,7 +75,7 @@
         }
 
         /// For small screens < 600 px
-        @media only screen and (max-width: $bp-medium) {
+        @media only screen and (max-width: $bp-small) {
             width: 2rem;
             height: 2rem;
             overflow: hidden;
@@ -119,7 +119,7 @@
         z-index: 10000;
         //border: 3px solid red;
 
-        @media only screen and (max-width: $bp-medium) {
+        @media only screen and (max-width: $bp-small) {
             display: flex;
         }
 

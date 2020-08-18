@@ -5,10 +5,16 @@ a {
 }
 
 h1 {
+    display: block;
     font-family: var(--font-display);
     font-size: 5.5rem;
     font-weight: 700;
     text-transform: uppercase;
+    line-height: 1.5;
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 4.5rem;
+    }
 }
 
 h2 {

@@ -34,9 +34,6 @@ html {
   @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media only screen and (max-width: 37.5em) {
-    html {
-      font-size: 37.5%; } }
 
 body {
   font-family: var(--font-primary);
@@ -51,10 +48,15 @@ a {
   color: inherit; }
 
 h1 {
+  display: block;
   font-family: var(--font-display);
   font-size: 5.5rem;
   font-weight: 700;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 1.5; }
+  @media only screen and (max-width: 68.75em) {
+    h1 {
+      font-size: 4.5rem; } }
 
 h2 {
   font-family: var(--font-display);
@@ -151,6 +153,11 @@ section {
   align-items: center; }
   .feature-small:not(:last-child) {
     margin-bottom: 2.5rem; }
+  @media only screen and (max-width: 68.75em) {
+    .feature-small {
+      margin-bottom: 0 !important; }
+      .feature-small:not(:last-child) {
+        margin-right: 5rem; } }
   .feature-small__icon {
     text-align: center;
     margin-bottom: 2.5rem;
@@ -189,9 +196,9 @@ section {
     text-decoration: none;
     text-transform: uppercase;
     color: var(--color-grey-light);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     transition: all .5s; }
-    @media only screen and (min-width: 75em) {
+    @media only screen and (min-width: 93.75em) {
       .navigation__list--link, .navigation__list--link:link, .navigation__list--link:visited {
         font-size: 1.5rem; } }
     .navigation__list--link::before, .navigation__list--link::after, .navigation__list--link:link::before, .navigation__list--link:link::after, .navigation__list--link:visited::before, .navigation__list--link:visited::after {
@@ -292,10 +299,10 @@ section {
 
 .slider {
   width: 100%;
-  max-width: 100%; }
-  @media only screen and (min-width: 75em) {
+  max-width: 85rem; }
+  @media only screen and (min-width: 93.75em) {
     .slider {
-      width: 110rem; } }
+      max-width: 110rem; } }
   .slider__image-wrapper {
     width: 100%;
     position: relative; }
@@ -338,6 +345,7 @@ section {
 
 .team {
   width: 100%;
+  max-width: 150rem;
   padding: 3rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -416,6 +424,9 @@ section {
     text-align: center;
     line-height: 7rem;
     margin-bottom: 2rem; }
+    @media only screen and (max-width: 68.75em) {
+      .section-main__heading-1 {
+        line-height: 5.5rem; } }
   .section-main__text-content {
     max-width: 90rem;
     text-align: center;
@@ -489,20 +500,35 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 4rem; }
+    @media only screen and (max-width: 68.75em) {
+      .section-what-makes-us-diff__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; } }
     .section-what-makes-us-diff__content--left {
       text-align: right;
       font-family: var(--font-secondary);
       font-size: 6rem;
       font-weight: 300;
       line-height: 1.1; }
+      @media only screen and (max-width: 68.75em) {
+        .section-what-makes-us-diff__content--left {
+          text-align: center;
+          max-width: 70rem; } }
     .section-what-makes-us-diff__content--middle {
       font-family: var(--font-secondary);
       font-size: 1.4rem;
       line-height: 1.8; }
+      @media only screen and (max-width: 68.75em) {
+        .section-what-makes-us-diff__content--middle {
+          max-width: 70rem; } }
     .section-what-makes-us-diff__content--right {
       display: flex;
       flex-direction: column;
       align-items: center; }
+      @media only screen and (max-width: 68.75em) {
+        .section-what-makes-us-diff__content--right {
+          flex-direction: row; } }
   .section-what-makes-us-diff__text:not(:last-child) {
     margin-bottom: 1.7rem; }
 

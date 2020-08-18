@@ -1,9 +1,9 @@
 .slider {
     width: 100%;
-    max-width: 100%;
+    max-width: 85rem;
     
     @media only screen and (min-width: $bp-largest) {
-        width: 110rem
+        max-width: 110rem;
     }
 
     &__image-wrapper {
