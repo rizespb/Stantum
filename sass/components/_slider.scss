@@ -1,6 +1,7 @@
 .slider {
     width: 100%;
     max-width: 85rem;
+    outline: 3px solid blue;
     
     @media only screen and (min-width: $bp-largest) {
         max-width: 110rem;

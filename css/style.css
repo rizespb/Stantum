@@ -307,7 +307,8 @@ section {
 
 .slider {
   width: 100%;
-  max-width: 85rem; }
+  max-width: 85rem;
+  outline: 3px solid blue; }
   @media only screen and (min-width: 93.75em) {
     .slider {
       max-width: 110rem; } }
