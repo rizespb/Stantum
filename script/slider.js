@@ -4,9 +4,11 @@ let UIController = (function() {
     let DOMStrings = {
         sliderImageClass: '.slider__image',
         sliderImageClassActive: '.slider__image--active',
-        imageIDPrefix: 'sliderImage',
         leftBtn: '#slider-arrow-left',
-        rightBtn: '#slider-arrow-right'
+        rightBtn: '#slider-arrow-right',
+        sliderMarker: '.slider__marker',
+
+        imageIDPrefix: 'sliderImage'
     };
 
 
@@ -31,14 +33,41 @@ let controller = (function(UICtrl) {
     // Помещаем в переменную imageNodeList селекторы изображений слайдера
     let imagesNodeList = document.querySelectorAll(DOM.sliderImageClass);
 
+
     // Добавляем первому изображению класс '.slider__image--active'
     imagesNodeList[0].classList.add('slider__image--active');
 
-    
-    var setupEventListener = function() {
+
+    // Добавляем маркеры изображений на страницу
+    let setupMarkers = function(nodeList) {
+
+        // Создаем переменную, в которой храним html-код добавляемого маркера
+        let HTMLStringForMarker = '<span class="slider__marker" id="sliderMarker-%markerID%"></span>'
+        
+        //в соответствии с количеством изображений (nodeList.length) добавляем необходимое количество маркеров, заменяя %markerID% на нужную цифру
+        for (let i = 0; i < nodeList.length; i++) {
+            let newHTML = HTMLStringForMarker.replace('%markerID%', i);
+            document.querySelector('.slider__markers-container').insertAdjacentHTML('beforeend', newHTML);
+        };
+
+        document.getElementById('sliderMarker-0').classList.add('slider__marker--active');
+    }
+
+    let setupEventListener = function() {
         document.querySelector(DOM.leftBtn).addEventListener('click', slideLeft);
         document.querySelector(DOM.rightBtn).addEventListener('click', slideRight);
+
+
+        // querySelectorAll возвращает коллекцию элементов nodeList. На коллекцию нельзя повесить обработчик событий. Поэтому мы коллекцию сохраняем в переменную MarkerNodeList. А затем с помощью цикла навешиваем на каждый элемент коллекции MarkerNodeList обработчик событий
+        
+        let MarkerNodeList =  document.querySelectorAll('.slider__marker');
+
+        for (let i=0; i < MarkerNodeList.length; i++) {
+            MarkerNodeList[i].addEventListener('click', SliderMarkerControl);
+        }
     };
+
+    
 
     let slideLeft = function () {
         activeImageID = parseInt(document.querySelector(DOM.sliderImageClassActive).id.split('-')[1]);
@@ -69,6 +98,10 @@ let controller = (function(UICtrl) {
         }
     }
 
+    let SliderMarkerControl = function() {
+        alert('Marker was clicked');
+    }
+
 
     return {
         activeImageIDFn: function() {
@@ -76,6 +109,7 @@ let controller = (function(UICtrl) {
         },
 
         init: function() {
+            setupMarkers(imagesNodeList);
             setupEventListener();
         }
     };
