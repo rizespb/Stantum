@@ -331,7 +331,8 @@ section {
     display: flex; }
   .slider__image {
     width: 0;
-    height: auto; }
+    height: auto;
+    transition: all .5s; }
     .slider__image--active {
       width: 100% !important; }
   .slider__markers-container {
